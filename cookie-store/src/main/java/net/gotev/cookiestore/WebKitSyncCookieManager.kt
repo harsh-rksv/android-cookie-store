@@ -27,12 +27,6 @@ class WebKitSyncCookieManager(
         }
     }
 
-    init {
-        handleExceptions {
-            android.webkit.CookieManager.getInstance().setAcceptCookie(true)
-        }
-    }
-
     override fun put(uri: URI?, responseHeaders: MutableMap<String, MutableList<String>>?) {
         super.put(uri, responseHeaders)
         handleExceptions {
